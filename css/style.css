@@ -192,6 +192,12 @@ footer{
     height: 400px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    /* border: 1px solid red; */
+}
+.info h1 {
+    width: 40%;
+    /* border: 1px solid red; */
+    justify-content: left;
 }
 .info_Pe_image {
     margin-top: 20px;
@@ -200,6 +206,9 @@ footer{
     /* border: 1px solid red; */
     /* align-items: center; */
     justify-content: center;
+}
+.info_Pe_image img {
+    margin-top: 8%;
 }
 .info_Pe_data {
     padding: 20px;
