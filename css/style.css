@@ -167,6 +167,9 @@ body {
 .info_Pe_data img {
     height: 50px;
 }
+.info_Pe_data p {
+    line-height: 30px;
+}
 .IG {
     /* border: 1px solid red; */
     display: flex;
