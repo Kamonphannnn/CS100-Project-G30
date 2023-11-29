@@ -33,11 +33,12 @@ body {
     text-decoration: none;
     color: white;
     font-size: 18px;
+    transition: .3s ease-in-out;
 }
 
 #navbar a:hover {
     border-bottom: 2.5px solid white;
-   
+    padding: 8px;
 }
 
 .left{
@@ -48,6 +49,83 @@ body {
 .right{
     display: flex;
     margin-right: 50px;
+}
+/* ************banner************* */
+.banner {
+    background-image: url(/tst2.jpg);
+    background-size:cover;
+    color: #fff;
+    height: 550px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 50px;
+    padding-right: 50px;
+    justify-content: center;
+    text-align: center;
+}
+
+.bannerinfo{
+    text-align: center;
+    justify-items: center;
+    padding-top: 200px;
+    
+}
+
+.bannerinfo h1{
+    font-size: 35px;
+}
+
+.bannerlink{
+    display: flex;
+    grid-gap: 2rem;
+    justify-content: center;
+    margin-top: 26px;
+}
+
+.contain-a{
+    border: 1px solid black;
+    padding: 15px;
+    width: 120px;
+    transition: .3s ease-in-out;
+    background-color: #da1717;
+    cursor: pointer;
+}
+
+.contain-a:hover{
+    border: 1px solid rgb(0, 183, 229);
+    padding: 20px;
+    background: rgb(0, 183, 229);
+}
+
+.contain-a:hover a{
+    color: #fff;
+}
+
+.bannerpic{
+    display: flex;
+}
+
+.bannerpatong , .bannertonrak{
+    width: 50%;
+    height: 440px;
+    display: block;
+    padding-top: 45px;
+    text-align: center ;
+}
+
+.bannerpatong img{
+    width: 50%;
+    margin-top: 45px;
+    box-shadow: 0 0 20px 10px #ffffff;
+}
+
+.bannertonrak{
+    text-align: left;
+}
+
+.bannertonrak img{
+    width: 50%;
+    padding-top: 210px;
 }
 
 .sticky {
