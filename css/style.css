@@ -52,7 +52,7 @@ body {
 }
 /* ************banner************* */
 .banner {
-    background-image: url(/tst2.jpg);
+    background-image: url(/img/tst2.jpg);
     background-size:cover;
     color: #fff;
     height: 550px;
