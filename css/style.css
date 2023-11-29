@@ -1,3 +1,8 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -64,7 +69,7 @@ footer{
 .banner{
     background-size:cover;
     color: #fff;
-    height: 675px;
+    height: 705px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-left: 50px;
@@ -188,6 +193,63 @@ footer{
     border-radius: 10px;
     box-shadow: 0 0 10px #333;
 }
+
+.social_button{
+    cursor: pointer;
+}
+
+.so_wrapper .so_button{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    float: left;
+    margin: 0 5px;
+    background:#fff;
+    border-radius: 50px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-out;
+}
+
+.so_wrapper .so_button:hover{
+    width: 200px;
+}
+
+.so_wrapper .so_button .so_icon{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 60px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.so_wrapper .so_button:nth-child(1):hover .so_icon{
+    background: #4267B2;
+}
+
+.so_wrapper .so_button:nth-child(2):hover .so_icon{
+    background: #E1306C;
+}
+
+
+.so_wrapper .so_button .so_icon i{
+    font-size: 25px;
+    line-height: 60px;
+   
+}
+
+.so_wrapper .so_button span{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 60px;
+    margin-left: 10px;
+}
+
+
 /* ---------------End Info-------------- */
 
 
@@ -336,14 +398,14 @@ footer{
 /* ************* copyright ************ */
 .copyright{
     width: 100%;
-    height: 40px;
-    background: #2b2b2b;
+    height: 60px;
+    background: #2461b2;
     margin: 0;
 }
 .copyright-flex {
     display: flex;
     height: 40px;
-    color: #979797;
+    color: #ffffff;
 }
 .copytext{
     justify-self: flex-start;

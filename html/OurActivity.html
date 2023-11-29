@@ -56,7 +56,18 @@
                         <small>Please provide your university email in the format "xxx.yyy@dome.tu.ac.th".</small>
                         <span id="emailError" class="error"></span>
                     </div>
-
+                    <div class="form-group">
+                        <label for="phoneNumber">Mobile Number :</label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" placeholder="กรุณากรอกเบอร์โทร 10 หลัก" required>
+                    </div>
+                    <div class="form-group">
+                    <label for="gender">เพศ:</label>
+                        <select id="gender" name="gender">
+                            <option value="male">ชาย</option>
+                            <option value="female">หญิง</option>
+                            <option value="other">LGBTQ+</option>
+                        </select>
+                    </div>
                     <!-- Work/Activity Title Field -->
                     <div class="form-group">
                         <label for="workTitle">Work/Activity Title</label>
@@ -164,7 +175,7 @@
             <!-- copyright -->
         </footer>
         
-            
+        <script src="https://kit.fontawesome.com/137eea12a2.js" crossorigin="anonymous"></script>    
         <script src="../js/script.js"></script>
     </body>
 </html>

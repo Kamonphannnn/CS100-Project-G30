@@ -165,6 +165,16 @@ async function submitForm(event) {
   }
 }
 
+function validateForm() {
+  var phoneNumberInput = document.getElementById('phoneNumber');
+  var phoneNumberPattern = /^[0-9]{10}$/;
+
+  if (!phoneNumberPattern.test(phoneNumberInput.value)) {
+      alert('กรุณากรอกเบอร์โทร 10 หลัก');
+      return;
+  }
+
+
 // Event listener for form submission
 document.getElementById("myForm").addEventListener("submit", submitForm);
 
