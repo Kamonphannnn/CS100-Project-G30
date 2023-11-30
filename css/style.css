@@ -189,6 +189,12 @@ footer{
 
 
 /* ---------------Start Info------------ */
+.info h1 {
+    margin-left: 10%;
+    display: flex;
+    justify-content: left;
+    /* width: 80%; */
+}
 .info img {
     height: 300px;
     border-radius: 10px;
@@ -261,18 +267,11 @@ footer{
     height: 400px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* border: 1px solid red; */
-}
-.info h1 {
-    width: 40%;
-    /* border: 1px solid red; */
-    justify-content: left;
 }
 .info_Pe_image {
     margin-top: 20px;
     margin-left: 120px;
     display: flex;
-    /* border: 1px solid red; */
     /* align-items: center; */
     justify-content: center;
 }
@@ -283,7 +282,6 @@ footer{
     padding: 20px;
     display: block;
     /* font-size: medium; */
-    /* border: 1px solid red; */
     justify-content: center;
     align-items: center;
 }
@@ -295,7 +293,6 @@ footer{
     line-height: 30px;
 }
 .IG {
-    /* border: 1px solid red; */
     display: flex;
 }
 .IG p {
@@ -306,7 +303,6 @@ footer{
 
 
 /* Tonrak_Information */
-
 .tonrak-info{
     display: grid;
     grid-template-columns: 1fr 1fr  ;
@@ -319,9 +315,6 @@ footer{
     justify-content: center;
     
 }
-
-
-
 #tonrak-pic{
     /* 
     width: 372.4px;
@@ -330,13 +323,14 @@ footer{
     width: 418.95px;
     height: 594.855px;
 }
-
 .ton_info{
    
     margin-top: auto;
     margin-bottom: auto;
 }
-
+#icon_tonrak {
+    margin-left: 127px;
+}
 /*  Tonrak_Information_ended */
 
 /* ************ Info boom ***************** */
@@ -357,7 +351,6 @@ footer{
     margin-top: 20px;
     margin-left: 120px;
     display: flex;
-    /* border: 1px solid red; */
     /* align-items: center; */
     justify-content: center;
 }
@@ -365,7 +358,6 @@ footer{
     padding: 20px;
     display: block;
     /* font-size: medium; */
-    /* border: 1px solid red; */
     justify-content: center;
     align-items: center;
 }
@@ -412,7 +404,7 @@ footer{
     margin-left: 50px;
 }
 
-/* *********** HamburgerMenu ************ */
+/************ HamburgerMenu *************/
 .ham-menu {
     display: inline-block;
     cursor: pointer;
@@ -448,26 +440,8 @@ footer{
   }
 
 /* ********** Responesive************** */
+/* -------For Desktop----- */
 @media only screen and (min-width: 904px){
-    /* ---------Strat--------- */
-    .banner {
-        grid-template-columns: 1fr;
-        margin-bottom: 100px;
-        /* border: 1px solid red; */
-        height: 600px;
-    }
-    .banner h1 {
-        /* border: 1px solid red; */
-    }
-    .bannerlink {
-        /* border: 1px solid red; */
-    }
-    .bannerpic {
-        display: none;
-        /* border: 1px solid red; */
-    }
-
-    /* ---------End--------- */
     .ham-menu{
         display: none;
     }
@@ -477,10 +451,6 @@ footer{
     }
     #boom2{
         display: none;
-    }
-    .info h1{
-        width: 100%;
-        margin-left: auto !important;
     }
 
     #tonrak-pic{
@@ -539,18 +509,10 @@ footer{
     .banner {
         grid-template-columns: 1fr;
         margin-bottom: 100px;
-        /* border: 1px solid red; */
         height: 600px;
-    }
-    .banner h1 {
-        /* border: 1px solid red; */
-    }
-    .bannerlink {
-        /* border: 1px solid red; */
     }
     .bannerpic {
         display: none;
-        /* border: 1px solid red; */
     }
 
     /* ---------End--------- */
@@ -564,14 +526,16 @@ footer{
 
     .info_Pe_image{
         margin-left: 30px;
-        width: 100%;
+        width: 90%;
     }
 
     .info_Pe_data{
         margin-left: 30px;
         font-size: 14px 
     }
-    
+    .so_wrapper {
+        margin-left: -20px;
+    }
     #patong1{
         display: none;
     }
@@ -579,11 +543,8 @@ footer{
         display: block;
     }
     /* **********tonrak********** */
-    .info h1{
-        width: 100%;
-    }
-    .so_wrapper{
-        margin-left: 70px !important; 
+    #icon_tonrak {
+        margin-left: 47px;
     }
     .ton_info_data{
         margin-left: 50px;
@@ -641,18 +602,10 @@ footer{
     .banner {
         grid-template-columns: 1fr;
         margin-bottom: 100px;
-        /* border: 1px solid red; */
         height: 600px;
-    }
-    .banner h1 {
-        /* border: 1px solid red; */
-    }
-    .bannerlink {
-        /* border: 1px solid red; */
     }
     .bannerpic {
         display: none;
-        /* border: 1px solid red; */
     }
 
     /* ---------End--------- */
@@ -666,13 +619,21 @@ footer{
         text-align: center;
         margin-bottom: 360px;
     }
-
-    .info h1{
-        width: 100%;
-        padding: 0px;
-        margin-left: auto !important;
+    .img_profile {
+        display: flex;
     }
-
+    .info h1{
+        margin-left: 0;
+        margin: 0;
+        width: 100%;
+        justify-content: center;
+        padding: 0px;
+        /* margin-left: auto !important; */
+    }
+    .info_boom_data {
+        padding: 0;
+        margin: 0;
+    }
     .info_Pe_image{
         margin-left: 0px;
     }
