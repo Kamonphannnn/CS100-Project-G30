@@ -74,6 +74,7 @@ footer{
     grid-template-columns: 1fr 1fr;
     padding-left: 50px;
     padding-right: 50px;
+    margin-bottom: 40px;
     justify-content: center;
     text-align: center;
     background: rgba(black, 0.5);
@@ -256,7 +257,7 @@ footer{
 /*-------------Strat info_peeeeeeeeeeeeeeee ---------------------------*/
 .info_Pe {
     padding: 20px;
-    margin-top: 20px;
+    margin-top: -38px;
     height: 400px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -307,14 +308,15 @@ footer{
 /* Tonrak_Information */
 
 .tonrak-info{
-    display: flex;
-    justify-content: space-between;
-    margin:0;
-    padding-left: 300px;
-    padding-right: 200px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr  ;
+    padding: 20px;
     background-color: #fbfdfb;
+}
+
+.ton_info_data{
+    margin-left: 160px;
+    justify-content: center;
     
 }
 
@@ -345,7 +347,13 @@ footer{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-.info_Pe_image {
+
+.info_boom img{
+    width: 350px;
+    height: 450px;
+}
+
+.info_boom_image {
     margin-top: 20px;
     margin-left: 120px;
     display: flex;
@@ -353,7 +361,7 @@ footer{
     /* align-items: center; */
     justify-content: center;
 }
-.info_Pe_data {
+.info_boom_data {
     padding: 20px;
     display: block;
     /* font-size: medium; */
@@ -362,18 +370,8 @@ footer{
     align-items: center;
 }
 
-.info_Pe_data img {
-    height: 50px;
-}
-.info_Pe_data p {
+.info_boom_data p {
     line-height: 30px;
-}
-.IG {
-    /* border: 1px solid red; */
-    display: flex;
-}
-.IG p {
-    padding-left: 10px;
 }
 
 .sticky {
@@ -401,6 +399,7 @@ footer{
     height: 60px;
     background: #2461b2;
     margin: 0;
+    margin-top: 120px;
 }
 .copyright-flex {
     display: flex;
@@ -420,6 +419,7 @@ footer{
     position: absolute;
     right: 1rem;
     padding-top: 10px;
+    margin-right: 40px;
   }
   
   .bar1, .bar2, .bar3 {
@@ -482,5 +482,57 @@ footer{
 
     .menu-active{
         display: block;
+    }
+}
+
+@media only screen and (max-width: 576px){
+    .left{
+        margin-left: 10px;
+    }
+    .info_Pe,.tonrak-info,.info_boom {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        margin-bottom: 360px;
+    }
+
+    .info h1{
+        width: 100%;
+        padding: 0px;
+        margin-left: auto !important;
+    }
+
+    .info_Pe_image{
+        margin-left: 0px;
+    }
+
+    .info_Pe_image img{
+        justify-items: center
+    }
+
+    .so_wrapper{
+        display: inline-block;
+        text-align: center;
+        margin-left: auto !important;
+        padding-bottom: 50px;
+    }
+    /* ***********Tonrak ***************** */
+    .tonrak-info{
+        margin-bottom: 60px;
+        padding-bottom: 60px;
+    }
+    .ton_info_data {
+        margin-left: auto;
+    }
+    /* **********Boom************* */
+    .info_boom_image{
+        margin-left: 0px    ;
+    }
+    .info_boom{
+        margin-bottom: 575px;
+    }
+
+    .copyright{
+        font-size: small;
     }
 }
