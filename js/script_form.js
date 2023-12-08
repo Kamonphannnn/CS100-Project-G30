@@ -1,8 +1,15 @@
+/*
+  File: script.js
+  Author: CS100 Team
+  Date Created: 23 July 2023
+  Copyright: CSTU
+  Description: JS code of CSTU Passport that validate with JS
+*/
+
 const config = {
-  // backendUrl: "http://54.179.42.49/", // Default backend URL
-  // backendUrl: "https://d1npkyc4r380kx.cloudfront.net/", // Default backend URL
-  backendUrl: "https://d1a6370uhsfk5w.cloudfront.net/", // Default backend URL
+  backendUrl: "http://localhost:8000/", // Default backend URL
 };
+const port = 8000;
 
 // Function to validate Firstname and Lastname
 function validateName() {
@@ -60,7 +67,7 @@ function validateFormOnInput() {
 // Function to fetch activity types from the backend
 async function fetchActivityTypes() {
   try {
-    const response = await fetch(config.backendUrl + "getActivityType");
+    const response = await fetch(`http://${window.location.hostname}:${port}/getActivityType`);
     if (response.ok) {
       const data = await response.json();
       return data;
@@ -133,7 +140,7 @@ async function submitForm(event) {
 
   try {
     // Send data to the backend using POST request
-    const response = await fetch(config.backendUrl + "record", {
+    const response = await fetch(`http://${window.location.hostname}:${port}/record`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -164,16 +171,6 @@ async function submitForm(event) {
     console.error("An error occurred while submitting form data:", error);
   }
 }
-
-function validateForm() {
-  var phoneNumberInput = document.getElementById('phoneNumber');
-  var phoneNumberPattern = /^[0-9]{10}$/;
-
-  if (!phoneNumberPattern.test(phoneNumberInput.value)) {
-      alert('กรุณากรอกเบอร์โทร 10 หลัก');
-      return;
-  }
-
 
 // Event listener for form submission
 document.getElementById("myForm").addEventListener("submit", submitForm);
