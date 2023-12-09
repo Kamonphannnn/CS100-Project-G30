@@ -69,7 +69,7 @@ footer{
 .banner{
     background-size:cover;
     color: #fff;
-    height: 705px;
+    height: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-left: 50px;

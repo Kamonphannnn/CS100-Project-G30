@@ -1,3 +1,8 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -10,13 +15,18 @@ footer{
     background-color: #2461b2;
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
+.nav-wrapper{
+    align-items: center;
+}
 
 .logo{
     margin-left: 10;
     color: white;
+}
+.nav-wrapper{
+    position: relative;
 }
 
 #navbar ul{
@@ -49,10 +59,11 @@ footer{
     margin-left: 50px;
 }
 
-.right{
+.menu{
     display: flex;
     margin-right: 100px;
 }
+
 
 /* ------form block----Start---  */
 
@@ -62,6 +73,7 @@ footer{
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin-top: 80px;
 }
 
 .form-container h1 {
@@ -160,3 +172,38 @@ footer{
     margin-left: 50px;
 }
 /* ************* copyright ******END****** */
+
+@media only screen and (max-width: 904px) {
+    .menu{
+        display: none;
+    }
+
+    .logo h3 {
+        align-items: center;
+    }
+
+    .nav-wrapper{
+        padding: 0 1rem;
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #navbar ul{
+        width: 100%;
+    }
+
+    #navbar li {
+        display: block;
+        margin: 1rem 0;
+        padding: 1rem 0.5rem;
+    }
+
+    .menu li:hover {
+        background-color: #183f72;
+    }
+
+    .menu-active{
+        display: block;
+    }
+}
