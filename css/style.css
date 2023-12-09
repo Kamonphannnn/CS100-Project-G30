@@ -159,13 +159,18 @@ footer{
 */
 .bannerpic{
     display: flex;
+    align-self: center;
 }
 
+.bannerpatong{
+    height: auto;
+    margin-bottom: 15px;
+}
 .bannerpatong , .bannertonrak{
     width: 50%;
-    height: 440px;
+    height: auto;
     display: block;
-    padding-top: 45px;
+    margin-top: 45px;
     text-align: center ;
 }
 
@@ -307,13 +312,18 @@ footer{
     display: grid;
     grid-template-columns: 1fr 1fr  ;
     padding: 20px;
-    background-color: #fbfdfb;
+    background-color: #f0f0f0;
 }
 
 .ton_info_data{
-    margin-left: 160px;
     justify-content: center;
+    text-align: center;
     
+}
+
+#info_tonrak_text{
+    margin-left: 0%;
+    justify-content: center;
 }
 #tonrak-pic{
     /* 
@@ -327,9 +337,11 @@ footer{
    
     margin-top: auto;
     margin-bottom: auto;
+    margin-left: 50px;
 }
 #icon_tonrak {
-    margin-left: 127px;
+    display: inline-block;
+    
 }
 /*  Tonrak_Information_ended */
 
@@ -458,9 +470,6 @@ footer{
         height: 486.855px;
     }
 
-    .ton_info_data {
-        margin-left: 120px;
-    }
     .tonrak-info-image{
         margin-left: 10px;
     }
@@ -654,7 +663,10 @@ footer{
         padding-bottom: 60px;
     }
     .ton_info_data {
-        margin-left: auto;
+        margin-left: 0px;
+    }
+    .ton_info{
+        margin-left: 0px;
     }
     /* **********Boom************* */
     .info_boom_image{
