@@ -18,9 +18,19 @@ function validateName() {
   const errorElement = document.getElementById("fullnameError");
 
   if (names.length !== 2) {
-    errorElement.textContent = "Please enter both your Firstname and Lastname.";
+    errorElement.textContent = "Please enter both your Firstname and Lastname that must begin the first letter with uppercase.";
     return false;
   } else {
+
+    const FirstName = names[0];     // Check Uppercase
+    const LastName = names[1];
+    const isFirstNameValid = /^[A-Z][a-z]*$/.test(FirstName);
+    const isLastNameValid = /^[A-Z][a-z]*$/.test(LastName);
+
+    if (!isFirstNameValid || !isLastNameValid) {
+      return false;
+    }
+
     errorElement.textContent = ""; // Clear the error message when valid
   }
   return true;
@@ -29,11 +39,11 @@ function validateName() {
 // Function to validate Student ID
 function validateStudentID() {
   const studentIDInput = document.getElementById("studentID");
-  const studentIDPattern = /^\d{10}$/;
+  const studentIDPattern = /^6609\d{6}$/;
   const errorElement = document.getElementById("studentIDError");
 
   if (!studentIDPattern.test(studentIDInput.value)) {
-    errorElement.textContent = "Please enter a 10-digit Student ID.";
+    errorElement.textContent = "Please enter a 10-digit Student ID start with '6609'. ";
     return false;
   } else {
     errorElement.textContent = ""; // Clear the error message when valid
@@ -44,12 +54,12 @@ function validateStudentID() {
 // Function to validate University Email
 function validateEmail() {
   const emailInput = document.getElementById("email");
-  const emailPattern = /^.+@dome\.tu\.ac\.th$/;
+  const emailPattern = /^[a-zA-Z]+\.[a-zA-Z]{3}@dome\.tu\.ac\.th$/;
   const errorElement = document.getElementById("emailError");
 
   if (!emailPattern.test(emailInput.value)) {
     errorElement.textContent =
-      "Please provide a valid university email in the format 'xxx.yyy@dome.tu.ac.th'.";
+      "Please provide a valid university email in the format 'xxxxxx.yyy@dome.tu.ac.th'.";
     return false;
   } else {
     errorElement.textContent = ""; // Clear the error message when valid
@@ -57,12 +67,26 @@ function validateEmail() {
   return true;
 }
 
-// Function to validate form inputs on user input
-function validateFormOnInput() {
-  validateName();
-  validateStudentID();
-  validateEmail();
+//Function to validate Telephone Number
+function validatephoneNumber(){
+  const phoneInput = document.getElementById("phone");
+  const phonePattern = /^0\d{9}$/;
+  const errorElement = document.getElementById("phoneError");
+
+  if (!phonePattern.test(phoneInput.value)) {
+    errorElement.textContent = "Please enter a 10-digit Phone Number.";
+    return false;
+  } else {
+    errorElement.textContent = ""; // Clear the error message when valid
+  }
+  return true;
 }
+// Function to validate form inputs on user input
+//  function validateFormOnInput() {
+//  validateName();
+//  validateStudentID();
+//  validateEmail();
+// }
 
 // Function to fetch activity types from the backend
 async function fetchActivityTypes() {
@@ -100,12 +124,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 // Function to submit the form
-// Function to submit the form
 async function submitForm(event) {
   event.preventDefault();
 
   // Validate form inputs before submission
-  if (!validateName() || !validateStudentID() || !validateEmail()) {
+  if (!validateName() || !validateStudentID() || !validateEmail() || !validatephoneNumber()) {
     return;
   }
 
