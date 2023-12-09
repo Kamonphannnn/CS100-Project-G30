@@ -63,6 +63,10 @@ footer{
     opacity: 0.6;
 }
 
+.form{
+    margin-top: 5%;
+}
+
 .form-container {
     max-width: 600px;
     margin: 20px auto;

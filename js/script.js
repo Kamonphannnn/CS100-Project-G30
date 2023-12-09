@@ -22,3 +22,8 @@ function toggleHam(x) {
       myMenu.className = 'menu'
     }
 }
+
+function toggle(){
+    var blur = document.getElementById('myMenu');
+    blur.classList.toggle('active');
+}

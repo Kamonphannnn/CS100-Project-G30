@@ -202,10 +202,11 @@ async function submitForm(event) {
   const detailsContent = `
   <h2>${title}</h2>
   <img src="${URL.createObjectURL(image)}" alt="Preview" style="max-width: 100%; height: auto;">
-  <p>ผู้เข้าร่วม : ${name}</p>
-  <p>Email : ${email} เบอรโทรติดต่อ : ${phoneNumber}</p>
-  <p>ระยะเวลาของกิจกรรม : ${startDate} ถึง ${endDate} (เทอม ${semester}</p>
-  <p>รายละเอียด: ${description}</p>
+  <p><b>ผู้เข้าร่วม :</b> ${name}</p>
+  <p><b>Email :</b> ${email} <b>เบอร์โทรติดต่อ :</b> ${phoneNumber}</p>
+  <p><b>ระยะเวลาของกิจกรรม :</b> ${startDate} ถึง ${endDate} (เทอม ${semester})</p>
+  <p><b>รายละเอียด :</b> ${description}</p>
+  <a href="#form_spot" class ="back_button"> ^ Back ^ </a>
   
 `;
 
