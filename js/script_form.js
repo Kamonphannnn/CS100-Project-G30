@@ -69,7 +69,7 @@ function validateEmail() {
 
 //Function to validate Telephone Number
 function validatephoneNumber(){
-  const phoneInput = document.getElementById("phone");
+  const phoneInput = document.getElementById("phoneNumber");
   const phonePattern = /^0\d{9}$/;
   const errorElement = document.getElementById("phoneError");
 
@@ -117,6 +117,29 @@ function populateActivityTypes(activityTypes) {
   }
 }
 
+// Image viewer
+function previewImage() {
+  var input = document.getElementById('image');
+  var previewImage = document.getElementById('previewImage');
+
+  var file = input.files[0];
+  var reader = new FileReader();
+
+  reader.onloadend = function () {
+      previewImage.src = reader.result;
+      previewImage.style.display = 'block';
+  };
+
+  if (file) {
+      reader.readAsDataURL(file);
+  } else {
+      previewImage.src = '';
+      previewImage.style.display = 'none';
+  }
+}
+
+
+
 // Event listener when the page content has finished loading
 document.addEventListener("DOMContentLoaded", async () => {
   const activityTypes = await fetchActivityTypes();
@@ -160,6 +183,43 @@ async function submitForm(event) {
   };
 
   console.log(data);
+
+  const detailsContainer = document.createElement("div");
+  var title = document.getElementById("workTitle").value;
+  var name = document.getElementById("fullname").value;
+  var email = document.getElementById("email").value;
+  var semester = document.getElementById("semester").value;
+  var image = document.getElementById("image").files[0];
+  var start_date = document.getElementById("startDate").value;
+  var end_date = document.getElementById("endDate").value;
+  var phoneNumber = document.getElementById("phoneNumber").value;
+  var description = document.getElementById("description").value;
+
+  detailsContainer.id = "submission-details"; // กำหนด id หรือ class ตามที่ต้องการ
+  detailsContainer.classList.add("element_box");
+
+  // สร้าง HTML หรือเนื้อหาที่ต้องการแสดง
+  const detailsContent = `
+  <h2>${title}</h2>
+  <img src="${URL.createObjectURL(image)}" alt="Preview" style="max-width: 100%; height: auto;">
+  <p>ผู้เข้าร่วม : ${name}</p>
+  <p>Email : ${email} เบอรโทรติดต่อ : ${phoneNumber}</p>
+  <p>ระยะเวลาของกิจกรรม : ${startDate} ถึง ${endDate} (เทอม ${semester}</p>
+  <p>รายละเอียด: ${description}</p>
+  
+`;
+
+  detailsContainer.innerHTML = detailsContent;
+
+  // Add element
+  document.body.appendChild(detailsContainer);
+
+  const elementToInsertBefore = document.getElementById("footer");
+  document.body.insertBefore(detailsContainer, elementToInsertBefore);
+
+
+  // clear form
+  document.getElementById("myForm").reset();
 
   try {
     // Send data to the backend using POST request
