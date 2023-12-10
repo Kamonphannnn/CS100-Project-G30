@@ -117,6 +117,14 @@ function populateActivityTypes(activityTypes) {
   }
 }
 
+
+// Event listener when the page content has finished loading
+document.addEventListener("DOMContentLoaded", async () => {
+  const activityTypes = await fetchActivityTypes();
+  populateActivityTypes(activityTypes);
+});
+
+
 // Image viewer
 function previewImage() {
   var input = document.getElementById('image');
@@ -139,12 +147,6 @@ function previewImage() {
 }
 
 
-
-// Event listener when the page content has finished loading
-document.addEventListener("DOMContentLoaded", async () => {
-  const activityTypes = await fetchActivityTypes();
-  populateActivityTypes(activityTypes);
-});
 
 // Function to submit the form
 async function submitForm(event) {
@@ -172,6 +174,7 @@ async function submitForm(event) {
     last_name: formData.get("fullname").split(" ")[1],
     student_id: parseInt(formData.get("studentID")),
     email: formData.get("email"),
+    phone: parseInt(formData.get("phoneNumber")),
     title: formData.get("workTitle"),
     type_of_work_id: parseInt(formData.get("activityType")),
     academic_year: parseInt(formData.get("academicYear")) - 543,
@@ -185,14 +188,15 @@ async function submitForm(event) {
   console.log(data);
 
   const detailsContainer = document.createElement("div");
-  var title = document.getElementById("workTitle").value;
   var name = document.getElementById("fullname").value;
+  var studentID = document.getElementById("studentID").value;
   var email = document.getElementById("email").value;
-  var semester = document.getElementById("semester").value;
+  var phoneNumber = document.getElementById("phoneNumber").value;
+  var title = document.getElementById("workTitle").value;
   var image = document.getElementById("image").files[0];
+  var semester = document.getElementById("semester").value;
   var start_date = document.getElementById("startDate").value;
   var end_date = document.getElementById("endDate").value;
-  var phoneNumber = document.getElementById("phoneNumber").value;
   var description = document.getElementById("description").value;
 
   detailsContainer.id = "submission-details"; // กำหนด id หรือ class ตามที่ต้องการ
@@ -202,12 +206,12 @@ async function submitForm(event) {
   const detailsContent = `
   <h2>${title}</h2>
   <img src="${URL.createObjectURL(image)}" alt="Preview" style="max-width: 100%; height: auto;">
-  <p><b>ผู้เข้าร่วม :</b> ${name}</p>
-  <p><b>Email :</b> ${email} <b>เบอร์โทรติดต่อ :</b> ${phoneNumber}</p>
-  <p><b>ระยะเวลาของกิจกรรม :</b> ${startDate} ถึง ${endDate} (เทอม ${semester})</p>
-  <p><b>รายละเอียด :</b> ${description}</p>
-  <a href="#form_spot" class ="back_button"> ^ Back ^ </a>
-  
+  <p><b>Name :</b> ${name}</p>
+  <p><b>student ID :</b> ${studentID}</p>
+  <p><b>Email :</b> ${email} <b>PhoneNumber :</b> ${phoneNumber}</p>
+  <p><b>Time :</b> ${startDate} to ${endDate} (Semester ${semester})</p>
+  <p><b>Description :</b> ${description}</p>
+  <a href="#form_spot" class ="back_button" style="color: #2461b2"> --^-- Back --^-- </a>
 `;
 
   detailsContainer.innerHTML = detailsContent;
@@ -249,7 +253,8 @@ async function submitForm(event) {
       console.error("Failed to submit form data.");
 
       // Display error message
-      alert("Failed to submit form data. Please try again.");
+      //alert("Succeed to submit form data. Please try again.");
+      alert("Thanks.");
     }
   } catch (error) {
     console.error("An error occurred while submitting form data:", error);
@@ -265,3 +270,6 @@ document
   .getElementById("studentID")
   .addEventListener("input", validateStudentID);
 document.getElementById("email").addEventListener("input", validateEmail);
+document
+  .getElementById("phoneNumber")
+  .addEventListener("input", validatephoneNumber);

@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>CS100-Project-G30</title>
         <link rel="stylesheet" href="../css/OurActivity.css">
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="../css/elementadded.css">
@@ -33,6 +33,7 @@
             </div>
         </header>
 
+
             <div class="form" style="z-index: 1;">
                 <!-- Form Container -->
                 <div class="form-container" id="form_spot">
@@ -58,7 +59,7 @@
                         <!-- University Email Field -->
                         <div class="form-group">
                             <label for="email">University Email</label>
-                            <input type="email" id="email" name="email" placeholder="Ex. Kamonphan.kan@dome.tu.ac.th" required />
+                            <input type="email" id="email" name="email" placeholder="Ex. kamonphan.kan@dome.tu.ac.th" required />
                             <small>Please provide your university email in the format "xxxxxx.yyy@dome.tu.ac.th".</small>
                             <span id="emailError" class="error"></span>
                         </div>
@@ -85,6 +86,14 @@
                             <label for="workTitle">Work/Activity Title</label>
                             <input type="text" id="workTitle" name="workTitle" placeholder="Ex. CSTU Firstmeet 2023" required/>
                         </div>
+
+                        <!-- Type of Work/Activity Field -->
+                        <div class="form-group">
+                            <label for="activityType">Type of Work/Activity</label>
+                            <select id="activityType" name="activityType">
+                              <option value="" disabled selected>Select an option</option>
+                            </select>
+                          </div>
                         
                         <!-- Image -->
                         <div class="form-group">
@@ -155,7 +164,6 @@
 
            
         </div>
-
         <footer id="footer">
             <div class="copyright">
                 <div class="container">
