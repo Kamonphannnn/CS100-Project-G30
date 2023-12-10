@@ -211,12 +211,12 @@ async function submitForm(event) {
   <h2>${title}</h2>
   <img src="${URL.createObjectURL(image)}" alt="Preview" style="max-width: 100%; height: auto;">
   <p><b>Name :</b> ${name}</p>
-  <p><b>student ID :</b> ${studentID}</p>
-  <p><b>Email :</b> ${email} <b>PhoneNumber :</b> ${phoneNumber}</p>
+  <p><b>Student ID :</b> ${studentID}</p>
+  <p><b>Email :</b> ${email}   <b>PhoneNumber :</b> ${phoneNumber}</p>
   <p><b>Time :</b> ${startDate} to ${endDate} (Semester ${semester})</p>
   <p><b>Location : ${location}</b> 
   <p><b>Description :</b> ${description}</p>
-  <a href="#form_spot" class ="back_button" style="color: #2461b2"> --^-- Back --^-- </a>
+  <a href="#form_spot"  class="closed_button">Back</a>
 `;
 
   detailsContainer.innerHTML = detailsContent;
