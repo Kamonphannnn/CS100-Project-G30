@@ -1,9 +1,12 @@
+// I think it's all final.
+
 /*
   File: script.js
   Author: CS100 Team
   Date Created: 23 July 2023
   Copyright: CSTU
   Description: JS code of CSTU Passport that validate with JS
+  ----Thank you kub pee TA.---
 */
 
 const config = {

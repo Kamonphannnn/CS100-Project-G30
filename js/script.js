@@ -1,3 +1,4 @@
+// I think it's all final.
 let prevScrollPos = window.pageYOffset;
 
 window.onscroll = function() {
