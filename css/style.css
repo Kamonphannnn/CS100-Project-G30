@@ -65,6 +65,48 @@ footer{
     margin-right: 100px;
 }
 
+/* Donate */
+ 
+.blurblur#blur.active{
+    filter: blur(10px);
+    pointer-events: none;
+    user-select: none;
+}
+
+#popup{
+    z-index: 1000; 
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 350px;
+    padding: 50px;
+    background: #ffffff;
+    box-shadow: 0 5px 30px rgba(0, 0, 0,.30);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#popup.active{
+    top:50%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.closed_button{
+    position: relative;
+    padding: 5px 20px;
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #fff;
+    background: #2461b2;
+}
+
+
+
 /* ************banner************* */
 
 .banner{

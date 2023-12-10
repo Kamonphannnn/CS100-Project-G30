@@ -23,7 +23,7 @@
                             <li><a href="../index.html">Home</a></li>
                             <li><a href="../index.html#members">Members</a></li>
                             <li><a href="../html/OurActivity.html">Our activities</a></li>
-                            <li><a href="https://drive.google.com/file/d/1z4ppSxmN6A6XSvfpVWq15ll4weuFnOU8/view?usp=drivesdk" target="_blank">Donate</a></li>
+                            <li><a href="#" onclick="toggle()">Donate</a></li>
                         </ul>
                     <div class="ham-menu" onclick="toggleHam(this)">
                         <div class="bar1"></div>
@@ -33,8 +33,12 @@
                 </div>
             </div>
         </header>
+        <div id="popup">
+            <img src="../image/Tonrak/qrcode.jfif" style="width: 350px; height: 500px;margin:auto"><br>
+            <a href="#" onclick="toggle()" class="closed_button">Close</a>
+        </div>
 
-
+        <div class ="blurblur"id="blur">
             <div class="form" style="z-index: 1;">
                 <!-- Form Container -->
                 <div class="form-container" id="form_spot">
@@ -163,7 +167,7 @@
     
             </div>
 
-           
+        </div>   
         </div>
         <footer id="footer">
             <div class="copyright">
