@@ -200,6 +200,7 @@ async function submitForm(event) {
   var semester = document.getElementById("semester").value;
   var start_date = document.getElementById("startDate").value;
   var end_date = document.getElementById("endDate").value;
+  var location = document.getElementById("location").value;
   var description = document.getElementById("description").value;
 
   detailsContainer.id = "submission-details"; // กำหนด id หรือ class ตามที่ต้องการ
@@ -213,6 +214,7 @@ async function submitForm(event) {
   <p><b>student ID :</b> ${studentID}</p>
   <p><b>Email :</b> ${email} <b>PhoneNumber :</b> ${phoneNumber}</p>
   <p><b>Time :</b> ${startDate} to ${endDate} (Semester ${semester})</p>
+  <p><b>Location : ${location}</b> 
   <p><b>Description :</b> ${description}</p>
   <a href="#form_spot" class ="back_button" style="color: #2461b2"> --^-- Back --^-- </a>
 `;
